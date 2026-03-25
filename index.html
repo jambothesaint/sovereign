@@ -123,6 +123,15 @@
       padding:1.5rem;
     }
 
+    .card-dark h3{
+      color:#ffffff;
+    }
+
+    .card-dark p{
+      color:#ffffff;
+      opacity:.92;
+    }
+
     .icon-badge{
       width:54px;
       height:54px;
@@ -160,6 +169,11 @@
       padding:2rem;
     }
 
+    .hours-box p{
+      color:#ffffff;
+      opacity:.92;
+    }
+
     .hours-row{
       display:flex;
       justify-content:space-between;
@@ -178,6 +192,7 @@
       object-fit:cover;
       border-radius:1rem;
       border:1px solid var(--line);
+      display:block;
     }
 
     .cta-strip{
@@ -204,11 +219,31 @@
 
     @media (max-width: 991.98px){
       #find .col-lg-5{
-        margin-bottom:1.5rem;
+        margin-bottom:1.75rem;
+      }
+
+      #find .card-dark{
+        margin-bottom:.5rem;
       }
 
       .gallery-img{
         height:220px;
+      }
+    }
+
+    @media (max-width: 575.98px){
+      .section{
+        padding:4rem 0;
+      }
+
+      .hours-box,
+      .cta-box,
+      .card-dark .card-body{
+        padding:1.25rem;
+      }
+
+      .gallery-img{
+        height:200px;
       }
     }
   </style>
@@ -275,7 +310,7 @@
             <div class="card-body">
               <div class="icon-badge">🍕</div>
               <h3 class="h4">Stone Baked Pizza</h3>
-              <p class="text-white">
+              <p>
                 Freshly made, stone baked sourdough pizza with that proper crisp base and rich flavour.
               </p>
             </div>
@@ -287,7 +322,7 @@
             <div class="card-body">
               <div class="icon-badge">🍟</div>
               <h3 class="h4">Loaded Chips</h3>
-              <p class="text-white">
+              <p>
                 Big flavour, comfort-food energy, and the ideal side when you want something a bit extra.
               </p>
             </div>
@@ -299,7 +334,7 @@
             <div class="card-body">
               <div class="icon-badge">🚚</div>
               <h3 class="h4">Local Delivery</h3>
-              <p class="text-white">
+              <p>
                 Perfect for nights in — order local and get your food sorted without the hassle.
               </p>
             </div>
@@ -328,7 +363,7 @@
           <div class="hours-box">
             <span class="eyebrow">Why people choose us</span>
             <h3 class="h2 mb-3">Big flavour. Local feel. Easy order.</h3>
-            <p class="text-white mb-0">
+            <p class="mb-0">
               Whether you’re picking up on the way home or ordering in for a relaxed night, this is the kind of food that feels like a treat without trying too hard.
             </p>
           </div>
@@ -363,7 +398,7 @@
 
   <section class="section bg-black" id="find">
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-4 align-items-start">
         <div class="col-lg-5 mb-4 mb-lg-0">
           <h2 class="section-title">Find us</h2>
           <p class="section-subtitle">
