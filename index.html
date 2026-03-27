@@ -18,6 +18,79 @@
       --line:rgba(255,255,255,.08);
     }
 
+
+
+.menu-bottom-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:32px;
+  margin-top:40px;
+}
+
+.menu-col{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(217,164,65,0.22);
+  border-radius:16px;
+  padding:24px 22px;
+  height:100%;
+}
+
+.menu-col h3{
+  color:var(--gold);
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:1.35rem;
+  margin-bottom:20px;
+}
+
+.menu-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  margin-top:16px;
+}
+
+.menu-item:first-of-type{
+  margin-top:0;
+}
+
+.item-name{
+  color:#f5f1e8;
+  font-weight:700;
+  text-transform:uppercase;
+  line-height:1.3;
+}
+
+.item-price{
+  color:var(--gold);
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.menu-desc{
+  color:rgba(245,241,232,0.78);
+  font-size:.95rem;
+  line-height:1.5;
+  margin-top:6px;
+  padding-bottom:14px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.menu-col .menu-desc:last-child{
+  border-bottom:none;
+  padding-bottom:0;
+}
+
+@media (max-width: 991.98px){
+  .menu-bottom-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+}
+    
+
 .text-gold {
   color: var(--gold);
 }
@@ -373,54 +446,136 @@ still be real food.
       </div>
     </div>
 
-<div class="container py-5">
-  <div class="row text-center">
+<div class="menu-bottom-grid">
+  <div class="menu-col">
+    <h3>12 Inch Pizza</h3>
 
-    <!-- COLUMN 1 -->
-    <div class="col-md-4 mb-4">
-      <h4 class="text-uppercase text-gold mb-3">12 Inch Pizza</h4>
-      <ul class="list-unstyled menu-list">
-        <li><strong>Margherita</strong> – £10</li>
-        <li><strong>Tri Caise</strong> – £10</li>
-        <li><strong>Sunday Dinner</strong> – £14</li>
-        <li><strong>The Highlander</strong> – £14</li>
-        <li><strong>The Sacred Fire</strong> – £13</li>
-        <li><strong>The Firey Bird</strong> – £13</li>
-        <li><strong>The Saucy Bird</strong> – £13</li>
-        <li><strong>The Shroominati</strong> – £13</li>
-      </ul>
+    <div class="menu-item">
+      <span class="item-name">Margherita</span>
+      <span class="item-price">£10.00</span>
     </div>
+    <div class="menu-desc">Tomato base with chopped tomatoes and mozzarella</div>
 
-    <!-- COLUMN 2 -->
-    <div class="col-md-4 mb-4">
-      <h4 class="text-uppercase text-gold mb-3">Chips</h4>
-      <ul class="list-unstyled menu-list">
-        <li><strong>Highlander</strong> – £8</li>
-        <li><strong>Sacred Fire</strong> – £8</li>
-        <li><strong>Sunday Dinner</strong> – £8</li>
-        <li><strong>Sweet Cheezus</strong> – £6</li>
-        <li><strong>Margherita</strong> – £6</li>
-        <li><strong>Chilli Con Carne</strong> – £8</li>
-      </ul>
+    <div class="menu-item">
+      <span class="item-name">Tri Caise</span>
+      <span class="item-price">£10.00</span>
     </div>
+    <div class="menu-desc">Three cheese: mozzarella, chedder &amp; parmesan on a tomato base</div>
 
-    <!-- COLUMN 3 -->
-    <div class="col-md-4 mb-4">
-      <h4 class="text-uppercase text-gold mb-3">Make Your Own</h4>
-      <ul class="list-unstyled menu-list text-start">
-        <li><strong>Pizza Base</strong> – £10</li>
-        <li class="small text-muted mb-2">Tomato, Spicy Tomato, BBQ, Caramelised Onion, Peppercorn, Gravy</li>
-
-        <li><strong>Chips Base</strong> – £3</li>
-        <li class="small text-muted mb-2">Peppercorn, Gravy, Tomato, Spicy Tomato, BBQ, Honey</li>
-
-        <li><strong>Vegetables</strong> – £1</li>
-        <li><strong>Meat</strong> – £2</li>
-        <li><strong>Cheese</strong> – £1</li>
-        <li><strong>Chilli Con Carne</strong> – £4</li>
-      </ul>
+    <div class="menu-item">
+      <span class="item-name">The Sunday Dinner</span>
+      <span class="item-price">£14.00</span>
     </div>
+    <div class="menu-desc">Roast beef, turnip, carrot and roast potato on a caramelized onion base</div>
 
+    <div class="menu-item">
+      <span class="item-name">The Highlander</span>
+      <span class="item-price">£14.00</span>
+    </div>
+    <div class="menu-desc">Haggis, black pudding, carrot, neeps and tatties on a caramelized onion base</div>
+
+    <div class="menu-item">
+      <span class="item-name">The Sacred Fire</span>
+      <span class="item-price">£13.00</span>
+    </div>
+    <div class="menu-desc">Spicy tomato base pizza with pepperoni slices jalapenos and peppers</div>
+
+    <div class="menu-item">
+      <span class="item-name">The Firey Bird</span>
+      <span class="item-price">£13.00</span>
+    </div>
+    <div class="menu-desc">Spicy tomato base pizza with chicken, onion, crushed chilli flakes, jalapeno</div>
+
+    <div class="menu-item">
+      <span class="item-name">The Saucy Bird</span>
+      <span class="item-price">£13.00</span>
+    </div>
+    <div class="menu-desc">BBQ base pizza with chicken, peppers and onion</div>
+
+    <div class="menu-item">
+      <span class="item-name">The Shroominati</span>
+      <span class="item-price">£13.00</span>
+    </div>
+    <div class="menu-desc">Tomato base pizza with mushrooms, peppers &amp; onion</div>
+  </div>
+
+  <div class="menu-col">
+    <h3>Chips</h3>
+
+    <div class="menu-item">
+      <span class="item-name">Highlander</span>
+      <span class="item-price">£8.00</span>
+    </div>
+    <div class="menu-desc">Black pudding, haggis, neeps and carrots with peppercorn sauce and melted cheese</div>
+
+    <div class="menu-item">
+      <span class="item-name">Sacred Fire</span>
+      <span class="item-price">£8.00</span>
+    </div>
+    <div class="menu-desc">Pepperoni, peppers, jalapenos, spicy tomato sauce and melted mozzarella</div>
+
+    <div class="menu-item">
+      <span class="item-name">Sunday Dinner</span>
+      <span class="item-price">£8.00</span>
+    </div>
+    <div class="menu-desc">Roast beef, carrot, turnip and gravy</div>
+
+    <div class="menu-item">
+      <span class="item-name">Sweet Cheezus</span>
+      <span class="item-price">£6.00</span>
+    </div>
+    <div class="menu-desc">Honey, spring onion, parmesan cheese</div>
+
+    <div class="menu-item">
+      <span class="item-name">Margherita</span>
+      <span class="item-price">£6.00</span>
+    </div>
+    <div class="menu-desc">Tomato sauce, chopped tomatoes, basil, and mozzarella</div>
+
+    <div class="menu-item">
+      <span class="item-name">Chilli Con Carne</span>
+      <span class="item-price">£8.00</span>
+    </div>
+    <div class="menu-desc">Minced beef, chilli sauce, kidney beans, peppers, onion and melted cheese</div>
+  </div>
+
+  <div class="menu-col">
+    <h3>Make Your Own</h3>
+
+    <div class="menu-item">
+      <span class="item-name">Pizza (Choose Your Sauce)</span>
+      <span class="item-price">£10.00</span>
+    </div>
+    <div class="menu-desc">Tomato, Spicy Tomato, BBQ, Caramelized Onion, Peppercorn, Gravy</div>
+
+    <div class="menu-item">
+      <span class="item-name">Chips (Choose Your Sauce)</span>
+      <span class="item-price">£3.00</span>
+    </div>
+    <div class="menu-desc">Peppercorn, Gravy, Tomato, Spicy Tomato, BBQ, Honey</div>
+
+    <div class="menu-item">
+      <span class="item-name">Vegetables</span>
+      <span class="item-price">£1.00</span>
+    </div>
+    <div class="menu-desc">Onion, Tomato, Peppers, Sweet Corn, Mushroom, Pineapple, Carrot, Turnip</div>
+
+    <div class="menu-item">
+      <span class="item-name">Meat</span>
+      <span class="item-price">£2.00</span>
+    </div>
+    <div class="menu-desc">Chicken, Roast Beef, Ham, Haggis, Black Pudding, Pepperoni</div>
+
+    <div class="menu-item">
+      <span class="item-name">Cheese</span>
+      <span class="item-price">£1.00</span>
+    </div>
+    <div class="menu-desc">Mature/Mild Cheddar, Mozzarella, Parmesan</div>
+
+    <div class="menu-item">
+      <span class="item-name">Chilli Con Carne</span>
+      <span class="item-price">£4.00</span>
+    </div>
   </div>
 </div>
     
