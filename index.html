@@ -4,30 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Sovereign Slice | Stone Baked Sourdough Pizza in Kilsyth</title>
-  <meta name="description" content="Stone baked sourdough pizza and loaded chips in Kilsyth. Collection and local delivery available from Garrell Road Industrial Estate. Phone or email to order.">
-
+  <meta name="description" content="Stone baked sourdough pizza and loaded chips in Kilsyth. Find The Sovereign Slice at Garrell Road industrial estate with local delivery available.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
     :root{
       --bg:#111111;
-      --bg-soft:#171717;
-      --panel:#262626;
-      --panel-soft:#1f1f1f;
+      --bg-soft:#1b1b1b;
+      --panel:#202020;
       --text:#f5f1e8;
       --muted:#c8c1b6;
       --gold:#d9a441;
       --gold-dark:#b7862f;
-      --line:rgba(255,255,255,.10);
-      --shadow:0 10px 30px rgba(0,0,0,.22);
+      --line:rgba(255,255,255,.08);
     }
 
-    html{scroll-behavior:smooth;}
+    html { scroll-behavior:smooth; }
 
     body{
       background:var(--bg);
       color:var(--text);
-      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      font-family:system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     .navbar{
@@ -48,22 +44,21 @@
       display:flex;
       align-items:center;
       background:
-        linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.76)),
+        linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.75)),
         url('images/hero-pizza.jpg') center/cover no-repeat;
     }
 
     .hero h1{
-      font-size:clamp(2.3rem, 5vw, 4.9rem);
+      font-size:clamp(2.2rem, 5vw, 4.8rem);
       font-weight:800;
       line-height:1.02;
       letter-spacing:-0.03em;
-      max-width:11ch;
     }
 
     .hero .lead{
       color:var(--muted);
-      max-width:680px;
-      font-size:1.12rem;
+      max-width:720px;
+      font-size:1.15rem;
     }
 
     .eyebrow{
@@ -81,7 +76,7 @@
       color:#111;
       border:none;
       font-weight:700;
-      padding:.95rem 1.3rem;
+      padding:.9rem 1.25rem;
     }
 
     .btn-brand:hover{
@@ -106,15 +101,14 @@
     }
 
     .section-title{
-      font-size:clamp(1.9rem, 3vw, 2.8rem);
+      font-size:clamp(1.8rem, 3vw, 2.8rem);
       font-weight:800;
       margin-bottom:1rem;
-      letter-spacing:-0.02em;
     }
 
     .section-subtitle{
       color:var(--muted);
-      max-width:780px;
+      max-width:760px;
     }
 
     .card-dark{
@@ -122,22 +116,20 @@
       border:1px solid var(--line);
       border-radius:1rem;
       height:100%;
-      box-shadow:var(--shadow);
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
     }
 
     .card-dark .card-body{
       padding:1.5rem;
     }
 
-    .card-dark h3,
-    .card-dark h4{
-      color:#fff;
+    .card-dark h3{
+      color:#ffffff;
     }
 
     .card-dark p{
-      color:#fff;
+      color:#ffffff;
       opacity:.92;
-      margin-bottom:0;
     }
 
     .icon-badge{
@@ -160,7 +152,7 @@
     }
 
     .feature-list li{
-      padding:.55rem 0;
+      padding:.45rem 0;
       border-bottom:1px solid var(--line);
       color:var(--muted);
     }
@@ -171,16 +163,14 @@
 
     .hours-box,
     .cta-box{
-      background:linear-gradient(180deg, var(--panel-soft), #181818);
+      background:linear-gradient(180deg, #1f1f1f, #181818);
       border:1px solid var(--line);
       border-radius:1rem;
       padding:2rem;
-      box-shadow:var(--shadow);
     }
 
-    .hours-box p,
-    .cta-box p{
-      color:#fff;
+    .hours-box p{
+      color:#ffffff;
       opacity:.92;
     }
 
@@ -188,7 +178,7 @@
       display:flex;
       justify-content:space-between;
       gap:1rem;
-      padding:.75rem 0;
+      padding:.7rem 0;
       border-bottom:1px solid var(--line);
     }
 
@@ -203,15 +193,19 @@
       border-radius:1rem;
       border:1px solid var(--line);
       display:block;
-      box-shadow:var(--shadow);
     }
 
     .cta-strip{
       background:
-        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.78)),
-        url('images/van.jpg') center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
+        url('https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      color:var(--muted);
     }
 
     .small-muted{
@@ -223,62 +217,17 @@
       color:var(--gold);
     }
 
-    .menu-item{
-      padding:0 0 1rem;
-      margin:0 0 1rem;
-      border-bottom:1px solid var(--line);
-    }
-
-    .menu-item:last-child{
-      border-bottom:none;
-      margin-bottom:0;
-      padding-bottom:0;
-    }
-
-    .menu-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:1rem;
-      margin-bottom:.35rem;
-    }
-
-    .menu-head h4{
-      margin:0;
-      font-size:1.02rem;
-      font-weight:800;
-      line-height:1.25;
-    }
-
-    .menu-head span{
-      white-space:nowrap;
-      font-weight:800;
-      color:var(--gold);
-      font-size:1rem;
-    }
-
-    .menu-note{
-      color:var(--muted);
-      font-size:.95rem;
-      margin-top:1rem;
-    }
-
-    footer{
-      border-top:1px solid var(--line);
-      color:var(--muted);
-    }
-
     @media (max-width: 991.98px){
       #find .col-lg-5{
         margin-bottom:1.75rem;
       }
 
-      .gallery-img{
-        height:220px;
+      #find .card-dark{
+        margin-bottom:.5rem;
       }
 
-      .hero{
-        min-height:78vh;
+      .gallery-img{
+        height:220px;
       }
     }
 
@@ -296,10 +245,6 @@
       .gallery-img{
         height:200px;
       }
-
-      .hero h1{
-        max-width:none;
-      }
     }
   </style>
 </head>
@@ -311,10 +256,9 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">What We Serve</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#hours">Opening Times</a></li>
           <li class="nav-item"><a class="nav-link" href="#find">Find Us</a></li>
@@ -333,16 +277,16 @@
           <h1>Stone baked sourdough pizza in Kilsyth.</h1>
 
           <p class="lead mt-3">
-            Fresh pizza, loaded chips, and proper takeaway food — available for collection and local delivery.
+            Fresh pizza, loaded chips, and proper takeaway food — ready for pickup or local delivery.
           </p>
 
           <div class="d-flex flex-wrap gap-3 mt-4 hero-buttons">
-            <a href="tel:07539085946" class="btn btn-brand btn-lg hero-btn">Phone Us</a>
-            <a href="mailto:Sovereignslice@tuta.io" class="btn btn-outline-light btn-lg hero-btn">Email Us</a>
-          </div>
+  <a href="tel:07539085946" class="btn btn-brand btn-lg hero-btn">Phone Us</a>
+  <a href="mailto:Sovereignslice@tuta.io" class="btn btn-outline-light btn-lg hero-btn">Email Us</a>
+</div>
 
           <p class="small-muted mt-4 mb-0">
-            Garrell Road Industrial Estate • Kilsyth • Collection &amp; local delivery
+            Garrell Road Industrial Estate • Kilsyth • Local delivery available
           </p>
         </div>
       </div>
@@ -353,206 +297,47 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-8">
-          <h2 class="section-title">Menu</h2>
+          <h2 class="section-title">What we serve</h2>
           <p class="section-subtitle">
-            Stone baked pizza, loaded chips, collection and local delivery from Garrell Road Industrial Estate.
+            Simple, satisfying food done properly — built around pizza, flavour, and easy local takeaway nights.
           </p>
         </div>
       </div>
 
       <div class="row g-4">
-        <div class="col-lg-6">
+        <div class="col-md-4">
           <div class="card card-dark">
             <div class="card-body">
-              <h3 class="h4 mb-4">12&quot; Pizza</h3>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Margherita</h4>
-                  <span>£10.00</span>
-                </div>
-                <p>Tomato base with chopped tomatoes and mozzarella.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Tri Caise</h4>
-                  <span>£10.00</span>
-                </div>
-                <p>Three cheese: mozzarella, cheddar &amp; parmesan on a tomato base.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>The Sunday Dinner</h4>
-                  <span>£14.00</span>
-                </div>
-                <p>Roast beef, turnip, carrot and roast potato on a caramelized onion base.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>The Highlander</h4>
-                  <span>£14.00</span>
-                </div>
-                <p>Haggis, black pudding, carrot, neeps and tatties on a caramelized onion base.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>The Sacred Fire</h4>
-                  <span>£13.00</span>
-                </div>
-                <p>Spicy tomato base pizza with pepperoni, jalapenos and peppers.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>The Firey Bird</h4>
-                  <span>£13.00</span>
-                </div>
-                <p>Spicy tomato base pizza with chicken, onion, crushed chilli flakes and jalapeno.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>The Saucy Bird</h4>
-                  <span>£13.00</span>
-                </div>
-                <p>BBQ base pizza with chicken, peppers and onion.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>The Shroominati</h4>
-                  <span>£13.00</span>
-                </div>
-                <p>Tomato base pizza with mushrooms, peppers and onion.</p>
-              </div>
+              <div class="icon-badge">🍕</div>
+              <h3 class="h4">Stone Baked Pizza</h3>
+              <p>
+                Freshly made, stone baked sourdough pizza with that proper crisp base and rich flavour.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="card card-dark mb-4">
-            <div class="card-body">
-              <h3 class="h4 mb-4">Loaded Chips</h3>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Highlander</h4>
-                  <span>£8.00</span>
-                </div>
-                <p>Black pudding, haggis, neeps and carrots with peppercorn sauce and melted cheese.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Sacred Fire</h4>
-                  <span>£8.00</span>
-                </div>
-                <p>Pepperoni, peppers, jalapenos, spicy tomato sauce and melted mozzarella.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Sunday Dinner</h4>
-                  <span>£8.00</span>
-                </div>
-                <p>Roast beef, carrot, turnip and gravy.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Sweet Cheezus</h4>
-                  <span>£6.00</span>
-                </div>
-                <p>Honey, spring onion, parmesan cheese.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Margherita</h4>
-                  <span>£6.00</span>
-                </div>
-                <p>Tomato sauce, chopped tomatoes, basil and mozzarella.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Chilli Con Carne</h4>
-                  <span>£8.00</span>
-                </div>
-                <p>Minced beef, chilli sauce, kidney beans, peppers, onion and melted cheese.</p>
-              </div>
-            </div>
-          </div>
-
+        <div class="col-md-4">
           <div class="card card-dark">
             <div class="card-body">
-              <h3 class="h4 mb-4">Make Your Own</h3>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Pizza (Choose Your Sauce)</h4>
-                  <span>£10.00</span>
-                </div>
-                <p>Tomato, Spicy Tomato, BBQ, Caramelized Onion, Peppercorn, Gravy.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Chips (Choose Your Sauce)</h4>
-                  <span>£3.00</span>
-                </div>
-                <p>Peppercorn, Gravy, Tomato, Spicy Tomato, BBQ, Honey.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Vegetables</h4>
-                  <span>£1.00</span>
-                </div>
-                <p>Onion, Tomato, Peppers, Sweet Corn, Mushroom, Pineapple, Carrot, Turnip.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Meat</h4>
-                  <span>£2.00</span>
-                </div>
-                <p>Chicken, Roast Beef, Ham, Haggis, Black Pudding, Pepperoni.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Cheese</h4>
-                  <span>£1.00</span>
-                </div>
-                <p>Mature/Mild Cheddar, Mozzarella, Parmesan.</p>
-              </div>
-
-              <div class="menu-item">
-                <div class="menu-head">
-                  <h4>Chilli Con Carne</h4>
-                  <span>£4.00</span>
-                </div>
-                <p>Add as an extra topping option.</p>
-              </div>
-
-              <p class="menu-note mb-0">Phone to order for collection or local delivery.</p>
+              <div class="icon-badge">🍟</div>
+              <h3 class="h4">Loaded Chips</h3>
+              <p>
+                Big flavour, comfort-food energy, and the ideal side when you want something a bit extra.
+              </p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mt-4">
-        <div class="col-12">
-          <div class="hours-box">
-            <h3 class="h5 mb-3">Important Allergy Notice</h3>
-            <p class="mb-0">
-              We handle all major allergens in our van and, due to the small shared space, cannot guarantee cross-contamination will not occur.
-            </p>
+        <div class="col-md-4">
+          <div class="card card-dark">
+            <div class="card-body">
+              <div class="icon-badge">🚚</div>
+              <h3 class="h4">Local Delivery</h3>
+              <p>
+                Perfect for nights in — order local and get your food sorted without the hassle.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -567,21 +352,19 @@
           <p class="section-subtitle mb-4">
             The Sovereign Slice is all about great food without overcomplicating it — stone baked sourdough pizza, loaded chips, and a strong local feel.
           </p>
-
           <ul class="feature-list">
-            <li>Freshly made food with a proper takeaway-night feel</li>
+            <li>Freshly made food with a takeaway-night feel</li>
             <li>Independent local business in Kilsyth</li>
-            <li>Collection from Garrell Road Industrial Estate</li>
-            <li>Local delivery available to nearby areas</li>
+            <li>Easy pickup from Garrell Road industrial estate</li>
+            <li>Ideal for a quick dinner, family order, or treat night in</li>
           </ul>
         </div>
-
         <div class="col-lg-6">
           <div class="hours-box">
-            <span class="eyebrow">Why People Choose Us</span>
+            <span class="eyebrow">Why people choose us</span>
             <h3 class="h2 mb-3">Big flavour. Local feel. Easy order.</h3>
             <p class="mb-0">
-              Whether you’re collecting on the way home or ordering local delivery for a relaxed night in, this is the kind of food that feels like a proper treat.
+              Whether you’re picking up on the way home or ordering in for a relaxed night, this is the kind of food that feels like a treat without trying too hard.
             </p>
           </div>
         </div>
@@ -590,48 +373,41 @@
   </section>
 
   <section class="section" id="hours">
-  <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-6">
-        <h2 class="section-title">Opening Times</h2>
-        <p class="section-subtitle">
-          Open Wednesday to Saturday from 16:00 to 20:15. Orders are available for collection from Garrell Road Industrial Estate, Kilsyth, with local delivery to selected nearby areas.
-        </p>
-
-        <div class="hours-box mt-4">
-          <h3 class="h5 mb-3">Ordering Details</h3>
-          <p class="mb-0">
-            Phone or email to place an order for collection or delivery. It’s best to order ahead during busy periods and to check for any opening updates.
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6">
+          <h2 class="section-title">Opening times</h2>
+          <p class="section-subtitle">
+            Current public Facebook snippets mention the following evening opening pattern. Check Facebook before ordering in case of updates.
           </p>
         </div>
-      </div>
-
-      <div class="col-lg-6">
-        <div class="hours-box">
-          <div class="hours-row"><span>Monday</span><strong>Closed</strong></div>
-          <div class="hours-row"><span>Tuesday</span><strong>Closed</strong></div>
-          <div class="hours-row"><span>Wednesday</span><strong>16:00 – 20:15</strong></div>
-          <div class="hours-row"><span>Thursday</span><strong>16:00 – 20:15</strong></div>
-          <div class="hours-row"><span>Friday</span><strong>16:00 – 20:15</strong></div>
-          <div class="hours-row"><span>Saturday</span><strong>16:00 – 20:15</strong></div>
-          <div class="hours-row"><span>Sunday</span><strong>Closed</strong></div>
+        <div class="col-lg-6">
+          <div class="hours-box">
+            <div class="hours-row"><span>Monday</span><strong>Closed</strong></div>
+            <div class="hours-row"><span>Tuesday</span><strong>Closed</strong></div>
+            <div class="hours-row"><span>Wednesday</span><strong>16:00 – 20:15</strong></div>
+            <div class="hours-row"><span>Thursday</span><strong>16:00 – 20:15</strong></div>
+            <div class="hours-row"><span>Friday</span><strong>16:00 – 20:15</strong></div>
+            <div class="hours-row"><span>Saturday</span><strong>16:00 – 20:15</strong></div>
+            <div class="hours-row"><span>Sunday</span><strong>Closed</strong></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <section class="section bg-black" id="find">
     <div class="container">
       <div class="row g-4 align-items-start">
         <div class="col-lg-5 mb-4 mb-lg-0">
-          <h2 class="section-title">Find Us</h2>
+          <h2 class="section-title">Find us</h2>
           <p class="section-subtitle">
-            Based at Garrell Road Industrial Estate, Kilsyth, with collection on site and local delivery available to nearby areas.
+            Based at Garrell Road industrial estate, Kilsyth, with local delivery mentioned for nearby areas.
           </p>
 
           <div class="card card-dark mt-4">
             <div class="card-body">
-              <h3 class="h5">Delivery Areas</h3>
+              <h3 class="h5">Delivery areas</h3>
               <ul class="feature-list mt-3">
                 <li>Kilsyth £3</li>
                 <li>Queenzieburn £4</li>
@@ -643,7 +419,6 @@
                 <li>Blackwood £5</li>
                 <li>Craiglinn £5</li>
               </ul>
-              <p class="menu-note mb-0">Collection is also available from Garrell Road Industrial Estate.</p>
             </div>
           </div>
         </div>
@@ -671,16 +446,15 @@
   <section class="section cta-strip" id="contact">
     <div class="container">
       <div class="cta-box text-center">
-        <span class="eyebrow">Order Tonight</span>
+        <span class="eyebrow">Order tonight</span>
         <h2 class="section-title mb-3">Ready to order?</h2>
         <p class="section-subtitle mx-auto mb-4">
-          Phone or email to order for collection or local delivery.
+          Visit the Facebook page for the latest posts, menu updates, and ordering details.
         </p>
-
         <div class="d-flex justify-content-center flex-wrap gap-3">
-          <a class="btn btn-brand btn-lg" href="tel:07539085946">Phone Us</a>
-          <a class="btn btn-outline-light btn-lg" href="mailto:Sovereignslice@tuta.io">Email Us</a>
-        </div>
+  <a class="btn btn-brand btn-lg" href="tel:07539085946">Phone Us</a>
+  <a class="btn btn-outline-light btn-lg" href="mailto:Sovereignslice@tuta.io">Email Us</a>
+</div>
       </div>
     </div>
   </section>
@@ -689,12 +463,11 @@
     <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
       <div>
         <strong class="brand-accent">The Sovereign Slice</strong><br>
-        <span class="small-muted">Stone baked sourdough pizza, loaded chips, collection &amp; local delivery in Kilsyth</span>
+        <span class="small-muted">Stone baked sourdough pizza & loaded chips in Kilsyth</span>
       </div>
-
       <div class="small-muted text-md-end">
-        Garrell Road Industrial Estate, Kilsyth<br>
-        Phone 07539085946 • Email Sovereignslice@tuta.io
+        Garrell Road industrial estate, Kilsyth<br>
+        Check Facebook for latest hours and updates
       </div>
     </div>
   </footer>
